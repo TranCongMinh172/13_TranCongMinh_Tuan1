@@ -1,3 +1,64 @@
+// task 1, 2
+var massMark = 78
+var heightMark = 1.69
+var massJohn = 92
+var heightJohn = 1.95
+
+function BMI(mass, height) {
+    return mass / (height ** 2)
+}
+var markBMI = BMI(massMark, heightMark)
+var johnBMI = BMI(massJohn, heightJohn)
+var markHigherBMI = markBMI > johnBMI
+if (markHigherBMI) {
+    console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`)
+} else {
+    console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}!`)
+}
+
+// task 3
+var dolphins = [85, 54, 41]
+var koalas = [23, 34, 27]
+
+function avgScore(arr) {
+    n = arr.length;
+    sum = 0;
+    for (i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+    return sum / n;
+}
+
+var avgDolphins = avgScore(dolphins);
+var avgKoalas = avgScore(koalas);
+
+if (avgDolphins > avgKoalas) {
+    if (avgDolphins >= 100) {
+        console.log('dolphins team winner')
+    } else {
+        console.log('no team win')
+    }
+} else if (avgKoalas > avgDolphins) {
+    if (avgKoalas >= 100) {
+        console.log('koalas team winner')
+    } else {
+        console.log('no team win')
+    }
+} else {
+    if (avgDolphins >= 100) {
+        console.log('draw')
+    } else {
+        console.log('no team win')
+    }
+}
+
+// task 4
+var build = 275;
+var tip = build >= 50 && build <= 300 ? build * (15 / 100) : build * (20 / 100);
+console.log(`The bill was ${build}, the tip was ${tip}, and the total value
+${build + tip}
+`)
+
 // task 5
 var calcAverage = (arr) => {
     n = arr.length;
@@ -89,3 +150,4 @@ var printForecast = (arr) => {
     console.log(rs)
 }
 printForecast(temperatures)
+
